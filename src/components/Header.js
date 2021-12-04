@@ -10,6 +10,7 @@ const Header = () => {
                 <Link to='/home'>Home</Link>
                 <Link to='/shop'>Shop</Link>
                 <Link to='/about'>About</Link>
+                <img id='shopping-cart-icon'></img>
             </nav>
         </header>
     )
