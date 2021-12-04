@@ -18,6 +18,17 @@ header {
   margin: 0 10vw;
   justify-content: space-between;
 }
+header *, header *:visited, header *:active, header *:hover{
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 /* pages */
 /* About ComingSoon Home Shop */
