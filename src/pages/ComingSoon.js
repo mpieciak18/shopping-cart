@@ -10,3 +10,5 @@ const ComingSoon = () => {
         </div>
     )
 }
+
+export default ComingSoon
