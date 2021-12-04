@@ -1,21 +1,23 @@
 /* index */
+@font-face {
+  font-family: 'Hind Siliguri';
+  src: url('/src/fonts/HindSiliguri-Regular.ttf') format('truetype');
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Hind Siliguri";
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 /* components */
-/* Footer Header ShoppingCart */
+/* Header Footer ShoppingCart */
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: row;
+  margin: 0 10vw;
+  justify-content: space-between;
+}
 
 /* pages */
 /* About ComingSoon Home Shop */
