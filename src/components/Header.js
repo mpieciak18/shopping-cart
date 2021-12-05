@@ -4,13 +4,15 @@ const Header = () => {
     return (
         <header>
             <div id='header-left'>
-                <Link to='/home'>Store Name</Link>
+                <Link to='/home'><h1 id='title'>Store Name</h1></Link>
             </div>
             <nav id='header-right'>
                 <Link to='/home'>Home</Link>
                 <Link to='/shop'>Shop</Link>
                 <Link to='/about'>About</Link>
-                <img id='shopping-cart-icon'></img>
+                <div id='shopping-cart-container'>
+                    <img id='shopping-cart-icon'></img>
+                </div>
             </nav>
         </header>
     )

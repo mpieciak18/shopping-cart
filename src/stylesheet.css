@@ -2,8 +2,24 @@
 @font-face {
   font-family: 'Hind Siliguri';
   src: url('/src/fonts/HindSiliguri-Regular.ttf') format('truetype');
+  font-weight: normal;
 }
-
+@font-face {
+  font-family: 'Hind Siliguri Semi Bold';
+  src: url('/src/fonts/HindSiliguri-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Hind Siliguri Bold';
+  src: url('/src/fonts/HindSiliguri-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Hind Siliguri Medium';
+  src: url('/src/fonts/HindSiliguri-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Hind Siliguri Light';
+  src: url('/src/fonts/HindSiliguri-Light.ttf') format('truetype');
+}
 body {
   margin: 0;
   font-family: "Hind Siliguri";
@@ -15,14 +31,33 @@ body {
 header {
   display: flex;
   flex-direction: row;
-  margin: 0 10vw;
+  padding: 15px 30px;
   justify-content: space-between;
+  align-items: center;
+  background-color: black;
 }
 header *, header *:visited, header *:active, header *:hover{
   color: inherit;
   text-decoration: none;
 }
-
+#header-left {
+  color: #00ffff;
+  font-family: 'Hind Siliguri Semi Bold';
+  font-size: x-large;
+}
+#title {
+  margin: 0;
+}
+#header-right {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-size: x-large;
+  font-family: 'Hind Siliguri Medium';
+}
+#header-right > * {
+  margin: 0 20px;
+}
 /* Footer */
 footer {
   display: flex;
