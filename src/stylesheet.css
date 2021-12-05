@@ -78,6 +78,12 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+}
+#github-logo {
+  margin-left: 8px;
+  height: 24px;
+  width: 24px;
 }
 
 /* pages */
