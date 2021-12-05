@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Icon from '../assets/shopping-cart-icon.png'
 
 const Header = () => {
     return (
@@ -11,7 +12,7 @@ const Header = () => {
                 <Link to='/shop'>Shop</Link>
                 <Link to='/about'>About</Link>
                 <div id='shopping-cart-container'>
-                    <img id='shopping-cart-icon'></img>
+                    <img id='shopping-cart-icon' src={Icon}></img>
                 </div>
             </nav>
         </header>

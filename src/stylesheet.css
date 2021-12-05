@@ -54,9 +54,24 @@ header *, header *:visited, header *:active, header *:hover{
   color: white;
   font-size: x-large;
   font-family: 'Hind Siliguri Medium';
+  align-items: center;
 }
 #header-right > * {
   margin: 0 20px;
+}
+#shopping-cart-container {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 100%;
+  height: 48px;
+  width: 48px;
+  justify-content: center;
+  align-items: center;
+}
+#shopping-cart-icon {
+  height: 30px;
+  width: 30px;
 }
 /* Footer */
 footer {
