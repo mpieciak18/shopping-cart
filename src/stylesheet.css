@@ -1,24 +1,24 @@
 /* index */
 @font-face {
   font-family: 'Hind Siliguri';
-  src: url('/src/fonts/HindSiliguri-Regular.ttf') format('truetype');
+  src: url('/src/assets/') format('truetype');
   font-weight: normal;
 }
 @font-face {
   font-family: 'Hind Siliguri Semi Bold';
-  src: url('/src/fonts/HindSiliguri-SemiBold.ttf') format('truetype');
+  src: url('/src/assets/') format('truetype');
 }
 @font-face {
   font-family: 'Hind Siliguri Bold';
-  src: url('/src/fonts/HindSiliguri-Bold.ttf') format('truetype');
+  src: url('/src/assets/') format('truetype');
 }
 @font-face {
   font-family: 'Hind Siliguri Medium';
-  src: url('/src/fonts/HindSiliguri-Medium.ttf') format('truetype');
+  src: url('/src/assets/') format('truetype');
 }
 @font-face {
   font-family: 'Hind Siliguri Light';
-  src: url('/src/fonts/HindSiliguri-Light.ttf') format('truetype');
+  src: url('/src/assets/') format('truetype');
 }
 body {
   margin: 0;
