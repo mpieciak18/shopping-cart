@@ -45,8 +45,18 @@ header *, header *:visited, header *:active, header *:hover{
   font-family: 'Hind Siliguri Semi Bold';
   font-size: x-large;
 }
+#title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 #title {
   margin: 0;
+}
+#title-icon {
+  height: 48px;
+  width: 48px;
+  margin-left: 20px;
 }
 #header-right {
   display: flex;
