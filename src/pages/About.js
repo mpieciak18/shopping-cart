@@ -3,7 +3,7 @@ import Footer from "../components/Footer.js"
 
 const About = () => {
     return (
-        <div id='about'>
+        <div id='about' class='page'>
             <Header />
             <div id='about-contents'></div>
             <Footer />

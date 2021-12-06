@@ -73,8 +73,10 @@ header *, header *:visited, header *:active, header *:hover{
   height: 24px;
   width: 24px;
 }
+
 /* Footer */
 footer {
+  margin-top: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -88,3 +90,8 @@ footer {
 
 /* pages */
 /* About ComingSoon Home Shop */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

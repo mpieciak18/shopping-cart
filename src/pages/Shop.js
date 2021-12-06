@@ -3,7 +3,7 @@ import Footer from "../components/Footer.js"
 
 const Shop = () => {
     return (
-        <div id='shop'>
+        <div id='shop' class='page'>
             <Header />
             <div id='shop-contents'></div>
             <Footer />
