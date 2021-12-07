@@ -1,28 +1,28 @@
 /* index */
 @font-face {
-  font-family: 'Hind Siliguri';
-  src: url('/src/assets/HindSiliguri-Regular.ttf') format('truetype');
+  font-family: 'HindSiliguri-Regular';
+  src: url('./assets/HindSiliguri-Regular.ttf') format('truetype');
   font-weight: normal;
 }
 @font-face {
-  font-family: 'Hind Siliguri Semi Bold';
-  src: url('/src/assets/HindSiliguri-SemiBold.ttf') format('truetype');
+  font-family: 'HindSiliguri-SemiBold';
+  src: url('./assets/HindSiliguri-SemiBold.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Hind Siliguri Bold';
-  src: url('/src/assets/HindSiliguri-Bold.ttf') format('truetype');
+  font-family: 'HindSiliguri-Bold';
+  src: url('./assets/HindSiliguri-Bold.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Hind Siliguri Medium';
-  src: url('/src/assets/HindSiliguri-Medium.ttf') format('truetype');
+  font-family: 'HindSiliguri-Medium';
+  src: url('./assets/HindSiliguri-Medium.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Hind Siliguri Light';
-  src: url('/src/assets/HindSiliguri-Light.ttf') format('truetype');
+  font-family: 'HindSiliguri-Light';
+  src: url('./assets/HindSiliguri-Light.ttf') format('truetype');
 }
 body {
   margin: 0;
-  font-family: "Hind Siliguri";
+  font-family: "HindSiliguri-Regular";
 }
 /* components */
 /* Header Footer ShoppingCart */
@@ -31,7 +31,7 @@ body {
 header {
   display: flex;
   flex-direction: row;
-  padding: 15px 30px;
+  padding: 30px 150px;
   justify-content: space-between;
   align-items: center;
   background-color: black;
@@ -42,7 +42,7 @@ header *, header *:visited, header *:active, header *:hover{
 }
 #header-left {
   color: #00ffff;
-  font-family: 'Hind Siliguri Semi Bold';
+  font-family: 'HindSiliguri-SemiBold';
   font-size: x-large;
 }
 #title-container {
@@ -63,7 +63,7 @@ header *, header *:visited, header *:active, header *:hover{
   flex-direction: row;
   color: white;
   font-size: x-large;
-  font-family: 'Hind Siliguri Medium';
+  font-family: 'HindSiliguri-Medium';
   align-items: center;
 }
 #header-right > * {
@@ -104,4 +104,32 @@ footer {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+.page-contents {
+  margin: 50px 150px;
+}
+
+/* Home */
+#home-contents-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+}
+#home-contents-subheader {
+  font-size: large;
+  font-family: 'HindSiliguri-Bold';
+  color: slategray;
+}
+#home-contents-header {
+  font-size: 50px;
+  font-family: 'HindSiliguri-SemiBold';
+  margin-top: 10px;
+}
+#home-contents-header-line-1 {
+  line-height: 85%;
+}
+#home-page-picture {
+  height: 360px;
+  margin-left: 30px;
 }
