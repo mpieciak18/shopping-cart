@@ -3,8 +3,12 @@ import Home from './pages/Home.js'
 import Shop from './pages/Shop.js'
 import About from './pages/About.js'
 import ComingSoon from './pages/ComingSoon.js'
+import { useState } from 'react'
 
 const App = () => {
+    const [products, setProducts] = useState('')
+    const [cart, setCart] = useState('')
+
     return (
         <BrowserRouter>
             <Routes>
