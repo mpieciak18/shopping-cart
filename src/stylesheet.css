@@ -92,6 +92,12 @@ header *, header *:visited, header *:active, header *:hover{
 #header-right > a {
   margin: 0 20px;
 }
+#header-right > * {
+  transition: all .2s ease-in-out;
+}
+#header-right > *:hover {
+  transform: scale(1.1);
+}
 #shopping-cart-container {
   display: flex;
   flex-direction: row;
@@ -99,12 +105,16 @@ header *, header *:visited, header *:active, header *:hover{
   border-radius: 100%;
   height: 48px;
   width: 48px;
+  margin-left: 20px;
   justify-content: center;
   align-items: center;
 }
 #shopping-cart-icon {
   height: 24px;
   width: 24px;
+}
+#shopping-cart-container:hover {
+  cursor: pointer;
 }
 
 /* Footer */
@@ -166,6 +176,11 @@ footer {
   padding: 15px 0px;
   width: 400px;
   margin-top: 10px;
+  transition: all .2s ease-in-out;
+}
+#home-shop-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 #home-header-line-1, #home-header-line-2 {
   line-height: 90%;
