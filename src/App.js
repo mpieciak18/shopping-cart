@@ -4,10 +4,27 @@ import Shop from './pages/Shop.js'
 import About from './pages/About.js'
 import ComingSoon from './pages/ComingSoon.js'
 import { useState } from 'react'
+import SquatRack from './assets/images/squatrack.png'
+import PowerRack from './assets/images/powerrack.png'
+import Barbell from './assets/images/barbell.png'
+import IronPlates from './assets/images/ironplates.png'
+import BumperPlates from './assets/images/bumperplates.png'
+import Bench from './assets/images/bench.png'
 
 const App = () => {
-    const [products, setProducts] = useState('')
-    const [cart, setCart] = useState('')
+    const initProductState = [
+        {title: 'Squat Rack', price: 499, image: SquatRack},
+        {title: 'Power Rack', price: 799, image: PowerRack},
+        {title: 'Barbell', price: 299, image: Barbell},
+        {title: '45lb Iron Plates - pair', price: 59, image: IronPlates},
+        {title: '45lb Bumper Plates - pair', price: 130, image: BumperPlates},
+        {title: 'Bench', price: 199, image: Bench},
+    ]
+    const [products, setProducts] = useState(initProductState)
+
+    const [cart, setCart] = useState([])
+
+    const [total, setTotal] = useState(0)
 
     return (
         <BrowserRouter>
