@@ -118,12 +118,16 @@ header *, header *:visited, header *:active, header *:hover{
 }
 
 /* Footer */
-footer {
+#footer {
   margin-top: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+#footer:active, #footer:visited, #footer:link, #footer:hover {
+  color: inherit;
+  text-decoration: none;
 }
 #github-logo {
   margin-left: 8px;
