@@ -127,6 +127,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
 }
 .page-contents {
@@ -141,6 +142,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   font-family: 'Poppins-Bold';
+  margin-top: 30px;
 }
 #home-contents-one, #home-contents-two {
   display: flex;
@@ -162,7 +164,7 @@ footer {
   text-align: center;
   border-radius: 100px;
   padding: 15px 0px;
-  width: 300px;
+  width: 400px;
   margin-top: 10px;
 }
 #home-header-line-1, #home-header-line-2 {
