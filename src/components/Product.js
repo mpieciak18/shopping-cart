@@ -1,4 +1,4 @@
-const Product = () => {
+const Product = (props) => {
     return (
         <div class='product'>
             <div class='product-top-half'>
