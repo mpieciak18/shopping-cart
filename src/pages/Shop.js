@@ -5,11 +5,12 @@ import Product from "../components/Product.js"
 const Shop = (props) => {
     const { products, cart, setCart } = props
 
-    const ShopContents = (
+    let ShopContents
+    ShopContents = (
         <div id='shop-contents'>
             <div id='products-container'>
-                {products.map((products) => {
-                    return <Product title={products.title} price={products.price} image={products.image}/>
+                {products.map((product) => {
+                    return <Product title={product.title} price={product.price} image={product.image}/>
                 })}
             </div>
         </div>
@@ -18,7 +19,7 @@ const Shop = (props) => {
     return (
         <div id='shop' class='page'>
             <Header />
-            <ShopContents />
+            {ShopContents}
             <Footer />
         </div>
     )
