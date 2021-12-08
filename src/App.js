@@ -4,7 +4,7 @@ import Shop from './pages/Shop.js'
 import About from './pages/About.js'
 import ComingSoon from './pages/ComingSoon.js'
 
-const RouteSwitch = () => {
+const App = () => {
     return (
         <BrowserRouter>
             <Routes>
@@ -18,4 +18,4 @@ const RouteSwitch = () => {
     )
 }
 
-export default RouteSwitch
+export default App
