@@ -1,4 +1,4 @@
-import HomePicture from "../assets/home-photo.png"
+import HomePicture from "../assets/images/home-photo.png"
 
 const HomePageContents = () => {
     return (

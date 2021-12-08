@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import StoreIcon from '../assets/store-icon.png'
-import CartIcon from '../assets/shopping-cart-icon.png'
+import StoreIcon from '../assets/images/store-icon.png'
+import CartIcon from '../assets/images/shopping-cart-icon.png'
 
 const Header = () => {
     return (
