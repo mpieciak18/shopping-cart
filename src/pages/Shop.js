@@ -7,7 +7,7 @@ const Shop = (props) => {
 
     let ShopContents
     ShopContents = (
-        <div id='shop-contents'>
+        <div id='shop-contents' class='page-contents'>
             <div id='products-container'>
                 {products.map((product) => {
                     return <Product title={product.title} price={product.price} image={product.image}/>
