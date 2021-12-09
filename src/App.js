@@ -22,38 +22,58 @@ const App = () => {
     ]
     const [products, setProducts] = useState(initProductState)
 
+    const [cart, setCart] = useState([])
+
     const [total, setTotal] = useState(0)
 
-    // Use product ID to match product in products array state.
-    // Then, increase or decrease quantity of product in shopping cart.
-    const updateQuantity = (id, increase) => {
-        let updatedObj
-        let objIndex
+    // Use product ID to add product to cart
+    // If product is already in cart, increase quantity
+    const addToCart = (productId) => {
+        const addedProduct = {id: productId, quantity: 1}
+        let newCart
 
-        for (let i = 0; i < products.length; i++) {
-            if (products[i].id == id) {
-                objIndex = i
-                updatedObj = products[i]
+        if (cart.length == 0) {
+            newCart = [addedProduct]
+        } else if (isProductInCart(productId) == false) {
+            newCart = [...cart, addedProduct]
+        } else {
+            newCart = increaseQuantity(addedProduct)         
+        }
+
+        setCart(newCart)
+        console.log(cart)
+    }
+
+    // Check if product is in cart already
+    const isProductInCart = (productId) => {
+        for (let i = 0; i < cart.length; i++) {
+            if (cart[i].id == productId) {
+                return true
+            } else {
+                continue
+            }
+        }
+        return false
+    }
+
+    // Increase quantity of pre-existing item in cart
+    const increaseQuantity = (product) => {
+        // First, find index of pre-existing item in cart
+        let productIndex
+        for (let i = 0; i < cart.length; i++) {
+            if (cart[i].id == product.id) {
+                productIndex = i
                 break
             }
         }
-
-        if (increase == true) {
-            updatedObj.quantity += 1
-        } else {
-            updatedObj.quantity -= 1
-        }
-        
-        updateProduct(updatedObj)
-        
-        console.log(products)
-    }
-
-    // Update products array state with updated product object
-    const updateProduct = (product) => {
-        const sliceOne = products.slice(0, product.id)
-        const sliceTwo = products.slice(product.id + 1)
-        setProducts(...sliceOne, product, ...sliceTwo)
+        // Second, increase item quantity
+        const oldQuantity = cart[productIndex].quantity
+        product.quantity = oldQuantity + 1
+        // Third, create & return new cart array
+        const sliceOne = cart.slice(0, productIndex)
+        const sliceTwo = cart.slice(productIndex + 1)
+        const newCart = [...sliceOne, product, ...sliceTwo] 
+        return newCart
     }
 
     return (
@@ -61,7 +81,7 @@ const App = () => {
             <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/home' element={<Home />} />
-                <Route exact path='/shop' element={<Shop products={products} updateQuantity={updateQuantity} /> } />
+                <Route exact path='/shop' element={<Shop products={products} addToCart={addToCart} /> } />
                 <Route exact path='/about' element={<About />} />
                 <Route exact path='/coming-soon' element={<ComingSoon />} />
             </Routes>

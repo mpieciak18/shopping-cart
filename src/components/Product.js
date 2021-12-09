@@ -1,10 +1,10 @@
 const Product = (props) => {
-    const {id, title, price, image, updateQuantity} = props
+    const {id, title, price, image, addToCart} = props
 
-    const addToCart = (event) => {
+    const addItem = (event) => {
         const prodId = event.target.parentElement.parentElement.id
-        // pass product ID and 'increase = true' as arguments to updateQuantity
-        updateQuantity(prodId, true)
+        // call addToCart and pass product ID as parameter
+        addToCart(prodId)
     }
 
     return (
@@ -15,7 +15,7 @@ const Product = (props) => {
             <div class='product-bottom-half'>
                 <div class='product-title'>{title}</div>
                 <div class='product-price'>${price}.00</div>
-                <div class='product-button' onClick={addToCart}>Add to Cart</div>
+                <div class='product-button' onClick={addItem}>Add to Cart</div>
             </div>
         </div>
     )
