@@ -24,6 +24,36 @@ const App = () => {
 
     const [total, setTotal] = useState(0)
 
+    // Use product ID to match product in products array state.
+    // Then, increase or decrease quantity of product in shopping cart.
+    const updateQuantity = (id, increase) => {
+        let updatedObj
+        let objIndex
+
+        for (let i = 0; i < products.length; i++) {
+            if (products[i].id == id) {
+                objIndex = i
+                updatedObj = products[i]
+                break
+            }
+        }
+
+        if (increase == true) {
+            updatedObj.quantity += 1
+        } else {
+            updatedObj.quantity -= 1
+        }
+        
+        updateProduct(updatedObj)
+    }
+
+    // Update products array state with updated product object
+    const updateProduct = (product) => {
+        const sliceOne = products.slice(0, product.id)
+        const sliceTwo = products.slice(product.id + 1)
+        setProducts(...sliceOne, product, ...sliceTwo)
+    }
+
     return (
         <BrowserRouter>
             <Routes>
