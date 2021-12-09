@@ -17,7 +17,7 @@ const App = () => {
         {title: 'Power Rack', price: 799, image: PowerRack},
         {title: '45lb Olympic Barbell', price: 299, image: Barbell},
         {title: '45lb Iron Plates - Pair', price: 59, image: IronPlates},
-        {title: '45lb Bumper Plates - Pair', price: 130, image: BumperPlates},
+        {title: '45lb Bumper Plates - Pair', price: 119, image: BumperPlates},
         {title: 'Bench', price: 199, image: Bench},
     ]
     const [products, setProducts] = useState(initProductState)
