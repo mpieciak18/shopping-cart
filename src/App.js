@@ -45,6 +45,8 @@ const App = () => {
         }
         
         updateProduct(updatedObj)
+        
+        console.log(products)
     }
 
     // Update products array state with updated product object
@@ -59,7 +61,7 @@ const App = () => {
             <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/home' element={<Home />} />
-                <Route exact path='/shop' element={<Shop products={products}/> } />
+                <Route exact path='/shop' element={<Shop products={products} updateQuantity={updateQuantity} /> } />
                 <Route exact path='/about' element={<About />} />
                 <Route exact path='/coming-soon' element={<ComingSoon />} />
             </Routes>
