@@ -3,7 +3,7 @@ import Home from './pages/Home.js'
 import Shop from './pages/Shop.js'
 import About from './pages/About.js'
 import ComingSoon from './pages/ComingSoon.js'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import SquatRack from './assets/images/squatrack.png'
 import PowerRack from './assets/images/powerrack.png'
 import Barbell from './assets/images/barbell.png'
@@ -13,12 +13,12 @@ import Bench from './assets/images/bench.png'
 
 const App = () => {
     const initProductState = [
-        {id: 0, title: 'Squat Rack', price: 499, image: SquatRack, quantity: 0},
-        {id: 1, title: 'Power Rack', price: 799, image: PowerRack, quantity: 0},
-        {id: 2, title: '45lb Olympic Barbell', price: 299, image: Barbell, quantity: 0},
-        {id: 3, title: '45lb Iron Plates - Pair', price: 59, image: IronPlates, quantity: 0},
-        {id: 4, title: '45lb Bumper Plates - Pair', price: 119, image: BumperPlates, quantity: 0},
-        {id: 5, title: 'Bench', price: 199, image: Bench, quantity: 0},
+        {id: 0, title: 'Squat Rack', price: 499, image: SquatRack},
+        {id: 1, title: 'Power Rack', price: 799, image: PowerRack},
+        {id: 2, title: '45lb Olympic Barbell', price: 299, image: Barbell},
+        {id: 3, title: '45lb Iron Plates - Pair', price: 59, image: IronPlates},
+        {id: 4, title: '45lb Bumper Plates - Pair', price: 119, image: BumperPlates},
+        {id: 5, title: 'Bench', price: 199, image: Bench},
     ]
     const [products, setProducts] = useState(initProductState)
 
@@ -29,7 +29,11 @@ const App = () => {
     // Use product ID to add product to cart
     // If product is already in cart, increase quantity
     const addToCart = (productId) => {
-        const addedProduct = {id: productId, quantity: 1}
+        const addedProduct = {
+            id: productId,
+            quantity: 1,
+            subtotal: cart[productId].price
+        }
         let newCart
 
         if (cart.length == 0) {
@@ -41,7 +45,6 @@ const App = () => {
         }
 
         setCart(newCart)
-        console.log(cart)
     }
 
     // Check if product is in cart already
