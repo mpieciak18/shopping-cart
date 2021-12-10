@@ -27,12 +27,12 @@ const App = () => {
     const [total, setTotal] = useState(0)
 
     // Use product ID to add product to cart
-    // If product is already in cart, increase quantity
+    // If product is already in cart, increase quantity & item subtotal
     const addToCart = (productId) => {
         const addedProduct = {
             id: productId,
             quantity: 1,
-            subtotal: cart[productId].price
+            subtotal: products[findProductsIndex(productId)].price, 
         }
         let newCart
 
@@ -41,7 +41,7 @@ const App = () => {
         } else if (isProductInCart(productId) == false) {
             newCart = [...cart, addedProduct]
         } else {
-            newCart = increaseQuantity(addedProduct)         
+            newCart = increaseQuantitySubtotal(addedProduct)         
         }
 
         setCart(newCart)
@@ -59,25 +59,45 @@ const App = () => {
         return false
     }
 
-    // Increase quantity of pre-existing item in cart
-    const increaseQuantity = (product) => {
+    // Increase quantity of pre-existing item in cart (and its subtotal)
+    const increaseQuantitySubtotal = (product) => {
         // First, find index of pre-existing item in cart
-        let productIndex
-        for (let i = 0; i < cart.length; i++) {
-            if (cart[i].id == product.id) {
-                productIndex = i
-                break
-            }
-        }
+        const cartIndex = findCartIndex(product.id)
         // Second, increase item quantity
-        const oldQuantity = cart[productIndex].quantity
+        const oldQuantity = cart[cartIndex].quantity
         product.quantity = oldQuantity + 1
-        // Third, create & return new cart array
-        const sliceOne = cart.slice(0, productIndex)
-        const sliceTwo = cart.slice(productIndex + 1)
+        // Third, increase item subtotal
+        const oldSubTotal = cart[cartIndex].subtotal
+        product.subtotal += oldSubTotal 
+        // Fourth, create & return new cart array
+        const sliceOne = cart.slice(0, cartIndex)
+        const sliceTwo = cart.slice(cartIndex + 1)
         const newCart = [...sliceOne, product, ...sliceTwo] 
         return newCart
     }
+
+    // Find products array index from product / cart item id
+    const findProductsIndex = (id) => {
+        for (let i = 0; i < products.length; i++) {
+            if (products[i].id == id) {
+                return i
+            }
+        }
+    } 
+
+    // Find cart array index from product / cart item id
+    const findCartIndex = (id) => {
+        for (let i = 0; i < cart.length; i++) {
+            if (cart[i].id == id) {
+                return i
+            }
+        }
+    } 
+
+    // TEST
+    useEffect(() => {
+        console.log(cart)
+    }, [cart])
 
     return (
         <BrowserRouter>
