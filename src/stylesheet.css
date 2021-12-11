@@ -213,6 +213,52 @@ header *, header *:visited, header *:active, header *:hover{
 #shopping-cart-title {
   font-size: 36px;
 }
+#shopping-cart-items-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%
+}
+.shopping-cart-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%
+}
+.shopping-cart-item-image {
+  height: 125px;
+}
+.shopping-cart-item-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.shopping-cart-item-subtotal {
+  font-family: 'Poppins-Regular';
+  margin: 10px 0px;
+  font-size:medium;
+}
+.shopping-cart-item-quantity-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  font-family: 'Poppins-Regular';
+}
+.shopping-cart-item-subtract-button, .shopping-cart-item-add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: rgb(221, 221, 221);
+  font-size: xx-large;
+  width: 30px;
+  height: 30px;
+  font-family: 'Poppins-Medium';
+  border-radius: 2px;
+}
 #shopping-cart-buttons {
   display: flex;
   flex-direction: column;
