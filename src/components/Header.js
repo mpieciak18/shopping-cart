@@ -5,7 +5,9 @@ import ShoppingCart from "../components/ShoppingCart.js"
 import CartBackground from './CartBackground.js'
 import { useState } from 'react'
 
-const Header = () => {
+const Header = (props) => {
+    const { total } = props
+
     const [visibility, setVisibility] = useState('hidden')
 
     const toggleVisibility = () => {
@@ -32,7 +34,7 @@ const Header = () => {
                     </div>
                 </nav>
             </div>
-            <ShoppingCart visibility={visibility} toggleVisibility={toggleVisibility} />
+            <ShoppingCart visibility={visibility} toggleVisibility={toggleVisibility} total={total} />
             <CartBackground visibility={visibility}/>
         </header>
     )
