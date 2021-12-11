@@ -45,7 +45,6 @@ const App = () => {
         }
 
         setCart(newCart)
-        console.log(cart, total)
     }
 
     // Check if product is in cart already
