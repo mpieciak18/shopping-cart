@@ -190,12 +190,13 @@ header *, header *:visited, header *:active, header *:hover{
   width: 525px;
   height: 100vh;
   background-color: white;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
 }
-.visible {
+#shopping-cart.visible {
   right: 0px;
 }
-.hidden {
+#shopping-cart.hidden {
   right: -525px;
 }
 #shopping-cart-container {
@@ -242,6 +243,24 @@ header *, header *:visited, header *:active, header *:hover{
   cursor: pointer;
   background-color: rgb(75, 75, 75);
 }
+
+/* CartBackground */
+#cart-background {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: all .5s ease-in-out;
+  z-index: 0;
+}
+#cart-background.visible {
+  left: 0px;
+}
+#cart-background.hidden {
+  left: -100vw;
+}
+
 /* pages */
 /* About ComingSoon Home Shop */
 .page {

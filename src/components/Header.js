@@ -2,14 +2,13 @@ import { Link } from 'react-router-dom'
 import StoreIcon from '../assets/images/store-icon.png'
 import CartIcon from '../assets/images/shopping-cart-icon.png'
 import ShoppingCart from "../components/ShoppingCart.js"
+import CartBackground from './CartBackground.js'
 import { useState } from 'react'
-
 
 const Header = () => {
     const [visibility, setVisibility] = useState('hidden')
 
     const toggleVisibility = () => {
-        console.log(visibility)
         if (visibility == 'hidden') {
             setVisibility('visible')
         } else {
@@ -34,6 +33,7 @@ const Header = () => {
                 </nav>
             </div>
             <ShoppingCart visibility={visibility} toggleVisibility={toggleVisibility} />
+            <CartBackground visibility={visibility}/>
         </header>
     )
 }
