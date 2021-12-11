@@ -42,7 +42,7 @@ body {
   background-color: rgb(245, 245, 245);
 }
 /* components */
-/* Header Footer ShoppingCart Product*/
+/* Header Footer Product ShoppingCart CartBackground */
 
 /* Header */
 header {
@@ -181,6 +181,39 @@ header *, header *:visited, header *:active, header *:hover{
   background-color: rgb(75, 75, 75);
 }
 
+/* ShoppingCart */
+/* #shopping-cart {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  width: 525px;
+  height: 100vh;
+  background-color: white;
+}
+.visible {
+  visibility: visible;
+}
+.hidden {
+  visibility: hidden;
+} */
+#shopping-cart {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0px;
+  width: 525px;
+  height: 100vh;
+  background-color: white;
+  transition: all 1s ease-in-out;
+}
+.visible {
+  right: 0px;
+}
+.hidden {
+  right: -525px;
+}
 /* pages */
 /* About ComingSoon Home Shop */
 .page {

@@ -1,6 +1,7 @@
 import Header from "../components/Header.js"
 import Footer from "../components/Footer.js"
 import Product from "../components/Product.js"
+import ShoppingCart from "../components/ShoppingCart.js"
 
 const Shop = (props) => {
     const { products, addToCart } = props
@@ -29,6 +30,7 @@ const Shop = (props) => {
             <Header />
             {ShopContents}
             <Footer />
+            <ShoppingCart />
         </div>
     )
 }
