@@ -92,12 +92,7 @@ const App = () => {
                 return i
             }
         }
-    } 
-
-    // TEST
-    useEffect(() => {
-        console.log(cart)
-    }, [cart])
+    }
 
     return (
         <BrowserRouter>
