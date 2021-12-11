@@ -3,7 +3,7 @@ import Home from './pages/Home.js'
 import Shop from './pages/Shop.js'
 import About from './pages/About.js'
 import ComingSoon from './pages/ComingSoon.js'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import SquatRack from './assets/images/squatrack.png'
 import PowerRack from './assets/images/powerrack.png'
 import Barbell from './assets/images/barbell.png'
@@ -23,8 +23,6 @@ const App = () => {
     const [products, setProducts] = useState(initProductState)
 
     const [cart, setCart] = useState([])
-
-    const [total, setTotal] = useState(0)
 
     // Use product ID to add product to cart
     // If product is already in cart, increase quantity & item subtotal
@@ -94,23 +92,14 @@ const App = () => {
         }
     }
 
-    // Update shopping cart total from cart subtotals
-    useEffect(() => {
-        let newTotal = 0
-        for (let i = 0; i < cart.length; i++) {
-            newTotal =+ cart[i].subtotal
-        }
-        setTotal(newTotal)
-    }, [cart])
-
     return (
         <BrowserRouter>
             <Routes>
-                <Route exact path='/' element={<Home total={total} />} />
-                <Route exact path='/home' element={<Home total={total} />} />
-                <Route exact path='/shop' element={<Shop products={products} addToCart={addToCart} total={total}/> } />
-                <Route exact path='/about' element={<About total={total} />} />
-                <Route exact path='/coming-soon' element={<ComingSoon total={total} />} />
+                <Route exact path='/' element={<Home cart={cart} />} />
+                <Route exact path='/home' element={<Home cart={cart} />} />
+                <Route exact path='/shop' element={<Shop products={products} addToCart={addToCart} cart={cart}/> } />
+                <Route exact path='/about' element={<About cart={cart} />} />
+                <Route exact path='/coming-soon' element={<ComingSoon cart={cart} />} />
             </Routes>
         </BrowserRouter>
     )

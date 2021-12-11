@@ -5,7 +5,7 @@ import HomePageContents from "../components/HomePageContents.js"
 const Home = (props) => {
     return (
         <div id='home' class='page'>
-            <Header total={props.total} />
+            <Header cart={props.cart} />
             <HomePageContents />
             <Footer />
         </div>

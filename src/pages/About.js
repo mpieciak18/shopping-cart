@@ -4,7 +4,7 @@ import Footer from "../components/Footer.js"
 const About = (props) => {
     return (
         <div id='about' class='page'>
-            <Header total={props.total}/>
+            <Header cart={props.cart} />
             <div id='about-contents'></div>
             <Footer />
         </div>

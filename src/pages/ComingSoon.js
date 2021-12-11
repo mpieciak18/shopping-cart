@@ -4,7 +4,7 @@ import Footer from "../components/Footer.js"
 const ComingSoon = (props) => {
     return (
         <div id='coming-soon' class='page'>
-            <Header total={props.total}/>
+            <Header cart={props.cart} />
             <div id='coming-soon-contents'></div>
             <Footer />
         </div>
