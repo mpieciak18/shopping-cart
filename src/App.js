@@ -45,6 +45,7 @@ const App = () => {
         }
 
         setCart(newCart)
+        console.log(cart, total)
     }
 
     // Check if product is in cart already
@@ -94,14 +95,23 @@ const App = () => {
         }
     }
 
+    // Update shopping cart total from cart subtotals
+    useEffect(() => {
+        let newTotal = 0
+        for (let i = 0; i < cart.length; i++) {
+            newTotal =+ cart[i].subtotal
+        }
+        setTotal(newTotal)
+    }, [cart])
+
     return (
         <BrowserRouter>
             <Routes>
-                <Route exact path='/' element={<Home />} />
-                <Route exact path='/home' element={<Home />} />
-                <Route exact path='/shop' element={<Shop products={products} addToCart={addToCart} /> } />
-                <Route exact path='/about' element={<About />} />
-                <Route exact path='/coming-soon' element={<ComingSoon />} />
+                <Route exact path='/' element={<Home total={total} />} />
+                <Route exact path='/home' element={<Home total={total} />} />
+                <Route exact path='/shop' element={<Shop products={products} addToCart={addToCart} total={total}/> } />
+                <Route exact path='/about' element={<About total={total} />} />
+                <Route exact path='/coming-soon' element={<ComingSoon total={total} />} />
             </Routes>
         </BrowserRouter>
     )
