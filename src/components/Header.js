@@ -28,8 +28,8 @@ const Header = () => {
                     <Link to='/home'>Home</Link>
                     <Link to='/shop'>Shop</Link>
                     <Link to='/about'>About</Link>
-                    <div id='shopping-cart-container' onClick={toggleVisibility}>
-                        <img id='shopping-cart-icon' src={CartIcon}></img>
+                    <div id='header-cart-container' onClick={toggleVisibility}>
+                        <img id='header-cart-icon' src={CartIcon}></img>
                     </div>
                 </nav>
             </div>
