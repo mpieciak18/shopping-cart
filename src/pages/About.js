@@ -1,10 +1,10 @@
 import Header from "../components/Header.js"
 import Footer from "../components/Footer.js"
 
-const About = () => {
+const About = (props) => {
     return (
         <div id='about' class='page'>
-            <Header />
+            <Header total={props.total}/>
             <div id='about-contents'></div>
             <Footer />
         </div>
