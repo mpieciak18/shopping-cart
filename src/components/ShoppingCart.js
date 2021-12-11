@@ -1,5 +1,20 @@
+import { useEffect, useState } from 'react'
+
 const ShoppingCart = (props) => {
-    const { visibility, toggleVisibility, total } = props
+    const { visibility, toggleVisibility, cart } = props
+
+    console.log(props.cart)
+
+    const [total, setTotal] = useState(0)
+
+    // Update shopping cart total from cart subtotals
+    useEffect(() => {
+        let newTotal = 0
+        for (let i = 0; i < cart.length; i++) {
+            newTotal =+ cart[i].subtotal
+        }
+        setTotal(newTotal)
+    }, [cart])
 
     return (
         <div id='shopping-cart' class={visibility}>
