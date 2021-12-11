@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react'
 const ShoppingCart = (props) => {
     const { visibility, toggleVisibility, cart } = props
 
-    console.log(props.cart)
-
     const [total, setTotal] = useState(0)
 
     // Update shopping cart total from cart subtotals
