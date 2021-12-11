@@ -31,7 +31,7 @@ const App = () => {
             id: productId,
             quantity: 1,
             image: products[findProductsIndex(productId)].image,
-            tite: products[findProductsIndex(productId)].title,
+            title: products[findProductsIndex(productId)].title,
             subtotal: products[findProductsIndex(productId)].price, 
         }
         let newCart
