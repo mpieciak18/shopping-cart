@@ -312,6 +312,7 @@ header *, header *:visited, header *:active, header *:hover{
   background-color: rgba(0, 0, 0, 0.75);
   transition: all .33s ease-in-out;
   z-index: 0;
+  cursor: pointer;
 }
 #cart-background.visible {
   left: 0px;

@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import StoreIcon from '../assets/images/store-icon.png'
 import CartIcon from '../assets/images/shopping-cart-icon.png'
 import ShoppingCart from "../components/ShoppingCart.js"
-import CartBackground from './CartBackground.js'
 import { useState } from 'react'
 
 const Header = (props) => {
@@ -35,7 +34,6 @@ const Header = (props) => {
                 </nav>
             </div>
             <ShoppingCart visibility={visibility} toggleVisibility={toggleVisibility} cart={cart} />
-            <CartBackground visibility={visibility}/>
         </header>
     )
 }

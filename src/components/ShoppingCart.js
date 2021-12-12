@@ -38,16 +38,19 @@ const ShoppingCart = (props) => {
     )
 
     return (
-        <div id='shopping-cart' class={visibility}>
-            <div id='shopping-cart-container'>
-                <div id='shopping-cart-title'>Your Shopping Cart</div>
-                {items}
-                <div id='shopping-cart-total'>Total: ${total}.00</div>
-                <div id='shopping-cart-buttons'>
-                    <div id='shopping-cart-checkout'>Checkout</div>
-                    <div id='shopping-cart-close' onClick={toggleVisibility}>Close</div>
+        <div id='cart-and-background'>
+            <div id='shopping-cart' class={visibility}>
+                <div id='shopping-cart-container'>
+                    <div id='shopping-cart-title'>Your Shopping Cart</div>
+                    {items}
+                    <div id='shopping-cart-total'>Total: ${total}.00</div>
+                    <div id='shopping-cart-buttons'>
+                        <div id='shopping-cart-checkout'>Checkout</div>
+                        <div id='shopping-cart-close' onClick={toggleVisibility}>Close</div>
+                    </div>
                 </div>
             </div>
+            <div id='cart-background' class={visibility} onClick={toggleVisibility}></div>
         </div>
     )
 }
