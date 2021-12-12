@@ -174,7 +174,7 @@ header *, header *:visited, header *:active, header *:hover{
   width: 300px;
   font-family: 'Poppins-Bold';
   padding: 10px 0px;
-  transition: all .33s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 .product-button:hover {
   cursor: pointer;
@@ -187,17 +187,17 @@ header *, header *:visited, header *:active, header *:hover{
   justify-content: center;
   position: fixed;
   top: 0px;
-  width: 525px;
+  width: 500px;
   height: 100vh;
   background-color: white;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.33s ease-in-out;
   z-index: 1;
 }
 #shopping-cart.visible {
   right: 0px;
 }
 #shopping-cart.hidden {
-  right: -525px;
+  right: -500px;
 }
 #shopping-cart-container {
   display: flex;
@@ -206,9 +206,10 @@ header *, header *:visited, header *:active, header *:hover{
   justify-content: space-between;
   height: auto;
   width: auto;
-  margin: 60px 40px;
+  margin: 60px 30px;
   font-size: large;
   font-family: 'Poppins-Bold';
+  gap: 40px;
 }
 #shopping-cart-title {
   font-size: 36px;
@@ -216,7 +217,8 @@ header *, header *:visited, header *:active, header *:hover{
 #shopping-cart-items-container {
   display: flex;
   flex-direction: column;
-  width: 100%
+  width: 100%;
+  overflow-y: scroll;
 }
 .shopping-cart-item {
   display: flex;
@@ -237,15 +239,18 @@ header *, header *:visited, header *:active, header *:hover{
 .shopping-cart-item-subtotal {
   font-family: 'Poppins-Regular';
   margin: 10px 0px;
-  font-size:medium;
+  font-size: medium;
 }
 .shopping-cart-item-quantity-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
   font-family: 'Poppins-Regular';
+}
+.shopping-cart-item-title {
+  font-size: medium;
 }
 .shopping-cart-item-subtract-button, .shopping-cart-item-add-button {
   display: flex;
@@ -254,10 +259,18 @@ header *, header *:visited, header *:active, header *:hover{
   padding: 5px;
   background-color: rgb(221, 221, 221);
   font-size: xx-large;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   font-family: 'Poppins-Medium';
   border-radius: 2px;
+  transition: all .33s ease-in-out;
+}
+.shopping-cart-item-subtract-button:hover, .shopping-cart-item-add-button:hover {
+  background-color: rgb(235, 235, 235);
+  cursor: pointer;
+}
+#shopping-cart-total {
+  font-size: 24px;
 }
 #shopping-cart-buttons {
   display: flex;
@@ -265,17 +278,17 @@ header *, header *:visited, header *:active, header *:hover{
   text-align: center;
 }
 #shopping-cart-checkout {
-  background-color: black;
-  color: white;
+  background-color: #00ffff;
+  color: black;
   width: 300px;
   font-family: 'Poppins-Bold';
   padding: 10px 0px;
   margin-bottom: 20px;
-  transition: all .33s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 #shopping-cart-checkout:hover {
   cursor: pointer;
-  background-color: rgb(75, 75, 75);
+  background-color: #00cece;
 }
 #shopping-cart-close {
   background-color: black;
@@ -283,7 +296,7 @@ header *, header *:visited, header *:active, header *:hover{
   width: 300px;
   font-family: 'Poppins-Bold';
   padding: 10px 0px;
-  transition: all .33s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 #shopping-cart-close:hover {
   cursor: pointer;
@@ -297,7 +310,7 @@ header *, header *:visited, header *:active, header *:hover{
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.75);
-  transition: all .5s ease-in-out;
+  transition: all .33s ease-in-out;
   z-index: 0;
 }
 #cart-background.visible {
