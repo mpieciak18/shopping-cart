@@ -9,7 +9,7 @@ const ShoppingCart = (props) => {
     useEffect(() => {
         let newTotal = 0
         for (let i = 0; i < cart.length; i++) {
-            newTotal =+ cart[i].subtotal
+            newTotal += cart[i].subtotal
         }
         setTotal(newTotal)
     }, [cart])
