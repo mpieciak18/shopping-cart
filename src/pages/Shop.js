@@ -3,7 +3,7 @@ import Footer from "../components/Footer.js"
 import Product from "../components/Product.js"
 
 const Shop = (props) => {
-    const { products, addToCart, cart} = props
+    const { products, cart, updateCart} = props
 
     let ShopContents
     ShopContents = (
@@ -16,7 +16,7 @@ const Shop = (props) => {
                             title={product.title}
                             price={product.price}
                             image={product.image}
-                            addToCart={addToCart}
+                            updateCart={updateCart}
                         />
                     )
                 })}
@@ -26,7 +26,7 @@ const Shop = (props) => {
 
     return (
         <div id='shop' class='page'>
-            <Header cart={cart} />
+            <Header cart={cart} updateCart={updateCart} />
             {ShopContents}
             <Footer />
         </div>

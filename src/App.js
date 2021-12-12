@@ -24,15 +24,26 @@ const App = () => {
 
     const [cart, setCart] = useState([])
 
+    // Master function to add or remove items from cart, based on arguments
+    const updateCart = (increase, productId) => {
+        if (increase == true) {
+            addToCart(productId)
+        } else {
+            delFromCart(productId)
+        }
+    }
+
     // Use product ID to add product to cart
     // If product is already in cart, increase quantity & item subtotal
     const addToCart = (productId) => {
+        const productIndex = findProductsIndex(productId)
+
         const addedProduct = {
             id: productId,
             quantity: 1,
-            image: products[findProductsIndex(productId)].image,
-            title: products[findProductsIndex(productId)].title,
-            subtotal: products[findProductsIndex(productId)].price, 
+            image: products[productIndex].image,
+            title: products[productIndex].title,
+            subtotal: products[productIndex].price, 
         }
         let newCart
 
@@ -75,6 +86,42 @@ const App = () => {
         const newCart = [...sliceOne, product, ...sliceTwo] 
         return newCart
     }
+    
+    // Use product ID to subtract product from cart
+    // If product quantity becomes zero, delete item from cart entirely
+    const delFromCart = (productId) => {
+        const productIndex = findProductsIndex(productId)
+        const cartIndex = findCartIndex(productId)
+        const newQuantity = cart[cartIndex].quantity - 1
+
+        let newCart
+        if (newQuantity > 0) {
+            // Decrease item quantity & return updated cart
+            newCart = decreaseQuantitySubtotal(productIndex, cartIndex)
+        } else {
+            // Delete item & return new cart
+            const sliceOne = cart.slice(0, cartIndex)
+            const sliceTwo = cart.slice(cartIndex + 1)
+            newCart = [...sliceOne, ...sliceTwo] 
+        }
+
+        setCart(newCart)
+    }
+
+    // Decrease quantity of pre-existing item in cart (and its subtotal)
+    const decreaseQuantitySubtotal = (productIndex, cartIndex) => {
+        // First, assign pre-existing item in cart to variable
+        const updatedProduct = cart[cartIndex]
+        // Second, decrease item quantity
+        updatedProduct.quantity -= 1
+        // Third, decrease item subtotal
+        updatedProduct.subtotal -= products[productIndex].price
+        // Fourth, create & return new cart array
+        const sliceOne = cart.slice(0, cartIndex)
+        const sliceTwo = cart.slice(cartIndex + 1)
+        const newCart = [...sliceOne, updatedProduct, ...sliceTwo] 
+        return newCart
+    }
 
     // Find products array index from product / cart item id
     const findProductsIndex = (id) => {
@@ -97,11 +144,11 @@ const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route exact path='/' element={<Home cart={cart} />} />
-                <Route exact path='/home' element={<Home cart={cart} />} />
-                <Route exact path='/shop' element={<Shop products={products} addToCart={addToCart} cart={cart}/> } />
-                <Route exact path='/about' element={<About cart={cart} />} />
-                <Route exact path='/coming-soon' element={<ComingSoon cart={cart} />} />
+                <Route exact path='/' element={<Home cart={cart} updateCart={updateCart} />} />
+                <Route exact path='/home' element={<Home cart={cart} updateCart={updateCart} />} />
+                <Route exact path='/shop' element={<Shop products={products} updateCart={updateCart} cart={cart} /> } />
+                <Route exact path='/about' element={<About cart={cart} updateCart={updateCart} />} />
+                <Route exact path='/coming-soon' element={<ComingSoon cart={cart} updateCart={updateCart} />} />
             </Routes>
         </BrowserRouter>
     )

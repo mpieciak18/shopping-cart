@@ -5,7 +5,7 @@ import ShoppingCart from "../components/ShoppingCart.js"
 import { useState } from 'react'
 
 const Header = (props) => {
-    const { cart } = props
+    const { cart, updateCart } = props
 
     const [visibility, setVisibility] = useState('hidden')
 
@@ -33,7 +33,7 @@ const Header = (props) => {
                     </div>
                 </nav>
             </div>
-            <ShoppingCart visibility={visibility} toggleVisibility={toggleVisibility} cart={cart} />
+            <ShoppingCart visibility={visibility} toggleVisibility={toggleVisibility} cart={cart} updateCart={updateCart} />
         </header>
     )
 }

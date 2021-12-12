@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const ShoppingCart = (props) => {
-    const { visibility, toggleVisibility, cart } = props
+    const { visibility, toggleVisibility, cart, updateCart } = props
 
     const [total, setTotal] = useState(0)
 
@@ -13,6 +13,18 @@ const ShoppingCart = (props) => {
         }
         setTotal(newTotal)
     }, [cart])
+
+    const addItem = (event) => {
+        const productId = event.target.parentElement.parentElement.parentElement.id
+        // call updateCart, passing 'increase = true' and product ID as parameters
+        updateCart(true, productId)
+    }
+
+    const delItem = (event) => {
+        const productId = event.target.parentElement.parentElement.parentElement.id
+        // call updateCart, passing 'increase = false' and product ID as parameters
+        updateCart(false, productId)
+    }
 
     const items = (
         <div id='shopping-cart-items-container'>
@@ -26,9 +38,9 @@ const ShoppingCart = (props) => {
                                 <div class='shopping-cart-item-title'>{item.title}</div>
                                 <div class='shopping-cart-item-subtotal'>${item.subtotal}.00</div>
                                 <div class='shopping-cart-item-quantity-container'>
-                                    <div class='shopping-cart-item-subtract-button'>-</div>
+                                    <div class='shopping-cart-item-subtract-button' onClick={delItem}>-</div>
                                     <div class='shopping-cart-item-quantity'>{item.quantity}</div>
-                                    <div class='shopping-cart-item-add-button'>+</div>
+                                    <div class='shopping-cart-item-add-button' onClick={addItem}>+</div>
                                 </div>
                             </div>
                         </div>

@@ -1,10 +1,10 @@
 const Product = (props) => {
-    const {id, title, price, image, addToCart} = props
+    const {id, title, price, image, updateCart} = props
 
     const addItem = (event) => {
-        const prodId = event.target.parentElement.parentElement.id
-        // call addToCart and pass product ID as parameter
-        addToCart(prodId)
+        const productId = event.target.parentElement.parentElement.id
+        // call updateCart, passing 'increase = true' and product ID as parameters
+        updateCart(true, productId)
     }
 
     return (
