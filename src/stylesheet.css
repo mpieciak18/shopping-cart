@@ -99,6 +99,10 @@ header *, header *:visited, header *:active, header *:hover{
 #header-right > *:hover {
   transform: scale(1.1);
 }
+#header-right > *:active {
+  transform: scale(1.1);
+  color: #00ffff;
+}
 #header-cart-container {
   display: flex;
   flex-direction: row;
@@ -116,6 +120,11 @@ header *, header *:visited, header *:active, header *:hover{
 }
 #header-cart-container:hover {
   cursor: pointer;
+}
+#header-cart-container:active {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: #00ffff;
 }
 
 /* Footer */
@@ -178,7 +187,11 @@ header *, header *:visited, header *:active, header *:hover{
 }
 .product-button:hover {
   cursor: pointer;
-  background-color: rgb(75, 75, 75);
+  background-color: rgb(50, 50, 50);
+}
+.product-button:active {
+  cursor: pointer;
+  background-color: rgb(100, 100, 100);
 }
 
 /* ShoppingCart */
@@ -257,16 +270,20 @@ header *, header *:visited, header *:active, header *:hover{
   justify-content: center;
   align-items: center;
   padding: 5px;
-  background-color: rgb(221, 221, 221);
+  background-color: rgb(215, 215, 215);
   font-size: xx-large;
   width: 20px;
   height: 20px;
   font-family: 'Poppins-Medium';
   border-radius: 2px;
-  transition: all .33s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 .shopping-cart-item-subtract-button:hover, .shopping-cart-item-add-button:hover {
   background-color: rgb(235, 235, 235);
+  cursor: pointer;
+}
+.shopping-cart-item-subtract-button:active, .shopping-cart-item-add-button:active {
+  background-color: rgb(245, 245, 245);
   cursor: pointer;
 }
 #shopping-cart-total {
@@ -288,7 +305,12 @@ header *, header *:visited, header *:active, header *:hover{
 }
 #shopping-cart-checkout:hover {
   cursor: pointer;
-  background-color: #00cece;
+  background-color: #00cfcf;
+}
+#shopping-cart-checkout:active {
+  cursor: pointer;
+  color: white;
+  background-color: #00b6b6;
 }
 #shopping-cart-close {
   background-color: black;
@@ -300,7 +322,11 @@ header *, header *:visited, header *:active, header *:hover{
 }
 #shopping-cart-close:hover {
   cursor: pointer;
-  background-color: rgb(75, 75, 75);
+  background-color: rgb(50, 50, 50);
+}
+#shopping-cart-close:active {
+  cursor: pointer;
+  background-color: rgb(100, 100, 100);
 }
 
 /* CartBackground */
@@ -370,7 +396,11 @@ header *, header *:visited, header *:active, header *:hover{
 }
 #home-shop-button:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  background-color: rgb(50, 50, 50);
+}
+#home-shop-button:active {
+  cursor: pointer;
+  background-color: rgb(100, 100, 100);
 }
 #home-header-line-1, #home-header-line-2 {
   line-height: 90%;
