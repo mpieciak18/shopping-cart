@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const ShoppingCart = (props) => {
     const { visibility, toggleVisibility, cart, updateCart } = props
@@ -57,7 +58,7 @@ const ShoppingCart = (props) => {
                     {items}
                     <div id='shopping-cart-total'>Total: ${total}.00</div>
                     <div id='shopping-cart-buttons'>
-                        <div id='shopping-cart-checkout'>Checkout</div>
+                        <Link id='shopping-cart-checkout' onClick={toggleVisibility} to='/about'>Checkout</Link>
                         <div id='shopping-cart-close' onClick={toggleVisibility}>Close</div>
                     </div>
                 </div>
