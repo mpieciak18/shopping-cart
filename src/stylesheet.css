@@ -250,6 +250,7 @@ header *, header *:visited, header *:active, header *:hover {
 }
 .purchase-notification.hidden, .purchase-notification > p.hidden {
   height: 0%;
+  font-size: 0px;
 }
 
 /* ShoppingCart */
