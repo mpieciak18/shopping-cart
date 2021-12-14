@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from './pages/Home.js'
 import Shop from './pages/Shop.js'
-import About from './pages/About.js'
 import ComingSoon from './pages/ComingSoon.js'
 import { useState } from 'react'
 import SquatRack from './assets/images/squatrack.png'
@@ -147,8 +146,7 @@ const App = () => {
                 <Route exact path='/' element={<Home cart={cart} updateCart={updateCart} />} />
                 <Route exact path='/home' element={<Home cart={cart} updateCart={updateCart} />} />
                 <Route exact path='/shop' element={<Shop products={products} updateCart={updateCart} cart={cart} /> } />
-                <Route exact path='/about' element={<About cart={cart} updateCart={updateCart} />} />
-                <Route exact path='/coming-soon' element={<ComingSoon cart={cart} updateCart={updateCart} />} />
+                <Route exact path='/about' element={<ComingSoon cart={cart} updateCart={updateCart} />} />
             </Routes>
         </BrowserRouter>
     )

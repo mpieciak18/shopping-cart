@@ -74,6 +74,7 @@ header *, header *:visited, header *:active, header *:hover {
 @media (max-width: 600px) {
   #header-container {
     flex-direction: column;
+    gap: 10px;
   }
 }
 @media (min-width: 1020px) {
@@ -104,12 +105,12 @@ header *, header *:visited, header *:active, header *:hover {
     width: 36px;
   }
   #header-cart-container {
-    height: 30px;
-    width: 30px;
+    height: 36px;
+    width: 36px;
   }
   #header-cart-icon {
-    height: 20px;
-    width: 20px;
+    height: 24px;
+    width: 24px;
   }
 }
 #header-left {
