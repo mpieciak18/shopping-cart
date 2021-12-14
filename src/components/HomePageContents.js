@@ -1,4 +1,5 @@
 import HomePicture from "../assets/images/home-photo.png"
+import { Link } from 'react-router-dom'
 
 const HomePageContents = () => {
     return (
@@ -9,7 +10,7 @@ const HomePageContents = () => {
                     <div id='home-header-line-1'>We know strength equipment.</div>
                     <div id='home-header-line-2'>We are StrengthStore.</div>
                 </div>
-                <div id='home-shop-button'>Shop Now</div>
+                <Link id='home-shop-button' to='/shop'>Shop Now</Link>
             </div>
             <div id='home-contents-right'>
                 <img id='home-image'src={HomePicture} />

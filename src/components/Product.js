@@ -35,7 +35,7 @@ const Product = (props) => {
                 <div class='product-button' onClick={addItem}>Add to Cart</div>
             </div>
             <div class={`purchase-notification ${hidden}`}>
-                <p class='hidden'>Added to Cart!</p>
+                <p class={hidden}>Added to Cart!</p>
             </div>
         </div>
 
