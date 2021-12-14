@@ -1,12 +1,15 @@
 import Header from "../components/Header.js"
 import Footer from "../components/Footer.js"
+import { useState } from 'react'
 
 const ComingSoon = (props) => {
     const { cart, updateCart } = props
 
+    const [overflow, setOverflow] = useState('visible')
+
     return (
         <div id='coming-soon' class='page'>
-            <Header cart={cart} updateCart={updateCart} />
+            <Header cart={cart} updateCart={updateCart} overflow={overflow} setOverflow={setOverflow} />
             <div id='coming-soon-contents'>
                 <h2>Coming Soon!</h2>
             </div>
