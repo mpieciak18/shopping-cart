@@ -1,10 +1,27 @@
-const Product = (props) => {
+import { useState } from 'react'
+
+const Product = (props) => {    
     const {id, title, price, image, updateCart} = props
 
+    const [hidden, setHidden] = useState('hidden')
+
     const addItem = (event) => {
-        const productId = event.target.parentElement.parentElement.id
+        const productTile = event.target.parentElement.parentElement
+        const productId = productTile.id
+
         // call updateCart, passing 'increase = true' and product ID as parameters
         updateCart(true, productId)
+
+        triggerNotification()        
+    }
+
+    const triggerNotification = () => {
+        setHidden('visible')
+        setTimeout(
+            () => {
+                setHidden('hidden')
+            }, 1500
+        )
     }
 
     return (
@@ -17,7 +34,11 @@ const Product = (props) => {
                 <div class='product-price'>${price}.00</div>
                 <div class='product-button' onClick={addItem}>Add to Cart</div>
             </div>
+            <div class={`purchase-notification ${hidden}`}>
+                <p class='hidden'>Added to Cart!</p>
+            </div>
         </div>
+
     )
 }
 

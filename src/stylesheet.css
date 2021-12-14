@@ -149,6 +149,7 @@ header *, header *:visited, header *:active, header *:hover{
 .product {
   display: flex;
   flex-direction: column;
+  position: relative;
   margin: 20px 20px;
   border: 1px solid rgb(199, 199, 199);
   border-radius: 10px;
@@ -193,6 +194,32 @@ header *, header *:visited, header *:active, header *:hover{
   cursor: pointer;
   background-color: rgb(100, 100, 100);
 }
+.purchase-notification {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: all .2s ease-in-out;
+}
+.purchase-notification > p {
+  color: white;
+  font-size: xx-large;
+  transition: all .2s ease-in-out;
+  margin: 0;
+}
+.purchase-notification.visible {
+  height: 100%;
+}
+.purchase-notification > p.visible {
+  height: auto;
+}
+.purchase-notification.hidden, .purchase-notification > p.hidden {
+  height: 0%;
+}
 
 /* ShoppingCart */
 #shopping-cart {
@@ -204,7 +231,7 @@ header *, header *:visited, header *:active, header *:hover{
   height: 100vh;
   background-color: white;
   transition: all 0.33s ease-in-out;
-  z-index: 1;
+  z-index: 2;
 }
 #shopping-cart.visible {
   right: 0px;
@@ -337,7 +364,7 @@ header *, header *:visited, header *:active, header *:hover{
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.75);
   transition: all .33s ease-in-out;
-  z-index: 0;
+  z-index: 1;
   cursor: pointer;
 }
 #cart-background.visible {
