@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.9bbe4dc7.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.2ec91b4b.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.2ec91b4b.chunk.js.map",
+    "runtime-main.js": "/shopping-cart/static/js/runtime-main.1eb26f1d.js",
+    "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.1eb26f1d.js.map",
+    "static/js/2.f58e6e23.chunk.js": "/shopping-cart/static/js/2.f58e6e23.chunk.js",
+    "static/js/2.f58e6e23.chunk.js.map": "/shopping-cart/static/js/2.f58e6e23.chunk.js.map",
+    "index.html": "/shopping-cart/index.html",
+    "static/css/main.9bbe4dc7.chunk.css.map": "/shopping-cart/static/css/main.9bbe4dc7.chunk.css.map",
+    "static/js/2.f58e6e23.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.f58e6e23.chunk.js.LICENSE.txt",
+    "static/media/stylesheet.css": "/shopping-cart/static/media/Poppins-Thin.a61eaf4c.ttf",
+    "static/media/barbell.26da84ee.png": "/shopping-cart/static/media/barbell.26da84ee.png",
+    "static/media/bench.72dfe12b.png": "/shopping-cart/static/media/bench.72dfe12b.png",
+    "static/media/bumperplates.8c8cbeb6.png": "/shopping-cart/static/media/bumperplates.8c8cbeb6.png",
+    "static/media/github-logo.80959ebd.png": "/shopping-cart/static/media/github-logo.80959ebd.png",
+    "static/media/home-photo.329a8bf0.png": "/shopping-cart/static/media/home-photo.329a8bf0.png",
+    "static/media/ironplates.aa45184d.png": "/shopping-cart/static/media/ironplates.aa45184d.png",
+    "static/media/powerrack.f4a9cbc7.png": "/shopping-cart/static/media/powerrack.f4a9cbc7.png",
+    "static/media/squatrack.0840fc2f.png": "/shopping-cart/static/media/squatrack.0840fc2f.png",
+    "static/media/store-icon.acc6955c.png": "/shopping-cart/static/media/store-icon.acc6955c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1eb26f1d.js",
+    "static/js/2.f58e6e23.chunk.js",
+    "static/css/main.9bbe4dc7.chunk.css",
+    "static/js/main.2ec91b4b.chunk.js"
+  ]
+}
