@@ -1,12 +1,9 @@
 import Header from "../components/Header.js"
 import Footer from "../components/Footer.js"
 import Product from "../components/Product.js"
-import { useState } from 'react'
 
 const Shop = (props) => {
-    const { products, cart, updateCart, overflow } = props
-
-    const [overflow, setOverflow] = useState('visible')
+    const { products, cart, updateCart } = props
 
     let ShopContents
     ShopContents = (
@@ -28,8 +25,8 @@ const Shop = (props) => {
     )
 
     return (
-        <div id='shop' class='page' style={overflowY: {overflow}}>
-            <Header cart={cart} updateCart={updateCart} overflow={overflow} setOverflow={setOverflow} />
+        <div id='shop' class='page'>
+            <Header cart={cart} updateCart={updateCart} />
             {ShopContents}
             <Footer />
         </div>
