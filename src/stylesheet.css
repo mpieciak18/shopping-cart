@@ -74,7 +74,9 @@ header *, header *:visited, header *:active, header *:hover {
 @media (max-width: 600px) {
   #header-container {
     flex-direction: column;
-    gap: 10px;
+  }
+  #header-left {
+    margin-bottom: 10px;
   }
 }
 @media (min-width: 1020px) {
@@ -119,10 +121,9 @@ header *, header *:visited, header *:active, header *:hover {
   align-items: center;
   color: #00ffff;
   font-family: 'Poppins-Bold';
-  gap: 20px
 }
 #title {
-  margin: 0;
+  margin: 0px 20px 0px 0px;
 }
 #header-right {
   display: flex;
@@ -130,7 +131,9 @@ header *, header *:visited, header *:active, header *:hover {
   align-items: center;
   color: white;
   font-family: 'Poppins-Medium';
-  gap: 20px;
+}
+#header-right > a {
+  margin-right: 20px;
 }
 #header-right > * {
   transition: all .2s ease-in-out;
@@ -331,8 +334,10 @@ header *, header *:visited, header *:active, header *:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
   font-family: 'Poppins-Regular';
+}
+.shopping-cart-item-quantity {
+  padding: 0px 30px;
 }
 .shopping-cart-item-title {
   font-size: medium;
@@ -426,6 +431,7 @@ header *, header *:visited, header *:active, header *:hover {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 .page-contents {
   padding: 30px;
