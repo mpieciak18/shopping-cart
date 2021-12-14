@@ -7,7 +7,9 @@ const ComingSoon = (props) => {
     return (
         <div id='coming-soon' class='page'>
             <Header cart={cart} updateCart={updateCart} />
-            <div id='coming-soon-contents'></div>
+            <div id='coming-soon-contents'>
+                <h2>Coming Soon!</h2>
+            </div>
             <Footer />
         </div>
     )

@@ -420,7 +420,6 @@ header *, header *:visited, header *:active, header *:hover {
 }
 
 /* pages */
-/* About ComingSoon Home Shop */
 .page {
   display: flex;
   flex-direction: column;
@@ -564,4 +563,11 @@ header *, header *:visited, header *:active, header *:hover {
   flex-wrap: wrap;
   justify-content: center;
   margin: 50px inherit;
+}
+
+/* Coming Soon */
+#coming-soon-contents {
+  margin-top: auto;
+  font-size: xx-large;
+  font-family: 'Poppins-SemiBold';
 }
