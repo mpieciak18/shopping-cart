@@ -10,10 +10,14 @@ const Header = (props) => {
     const [visibility, setVisibility] = useState('hidden')
 
     const toggleVisibility = () => {
+        const page = document.querySelector('body') 
+
         if (visibility == 'hidden') {
             setVisibility('visible')
+            page.style.overflow = 'hidden'
         } else {
             setVisibility('hidden')
+            page.style.overflow = 'visible'
         }
     }
 
