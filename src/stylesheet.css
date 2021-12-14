@@ -258,7 +258,6 @@ header *, header *:visited, header *:active, header *:hover {
   justify-content: center;
   position: fixed;
   top: 0px;
-  width: 500px;
   height: 100vh;
   background-color: white;
   transition: all 0.33s ease-in-out;
@@ -267,8 +266,21 @@ header *, header *:visited, header *:active, header *:hover {
 #shopping-cart.visible {
   right: 0px;
 }
-#shopping-cart.hidden {
-  right: -500px;
+@media (min-width: 1020px) {
+  #shopping-cart {
+    width: 500px;
+  }
+  #shopping-cart.hidden {
+    right: -500px;
+  }
+}
+@media (max-width: 1020px) {
+  #shopping-cart {
+    width: 100%;
+  }
+  #shopping-cart.hidden {
+    right: -100%;
+  }
 }
 #shopping-cart-container {
   display: flex;
