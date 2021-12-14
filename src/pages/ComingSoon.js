@@ -8,7 +8,7 @@ const ComingSoon = (props) => {
     const [overflow, setOverflow] = useState('visible')
 
     return (
-        <div id='coming-soon' class='page'>
+        <div id='coming-soon' class='page' style={overflowY: {overflow}>
             <Header cart={cart} updateCart={updateCart} overflow={overflow} setOverflow={setOverflow} />
             <div id='coming-soon-contents'>
                 <h2>Coming Soon!</h2>

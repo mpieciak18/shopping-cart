@@ -9,7 +9,7 @@ const Home = (props) => {
     const [overflow, setOverflow] = useState('visible')
 
     return (
-        <div id='home' class='page'>
+        <div id='home' class='page' style={overflowY: {overflow}>
             <Header cart={cart} updateCart={updateCart} overflow={overflow} setOverflow={setOverflow} />
             <HomePageContents />
             <Footer />

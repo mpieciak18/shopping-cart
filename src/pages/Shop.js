@@ -28,7 +28,7 @@ const Shop = (props) => {
     )
 
     return (
-        <div id='shop' class='page'>
+        <div id='shop' class='page' style={overflowY: {overflow}}>
             <Header cart={cart} updateCart={updateCart} overflow={overflow} setOverflow={setOverflow} />
             {ShopContents}
             <Footer />
