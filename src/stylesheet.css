@@ -67,19 +67,11 @@ header *, header *:visited, header *:active, header *:hover {
   width: 100%;
 }
 @media (min-width: 600px) {
-  header {
-    position: relative;
-  }
   #header-container {
     flex-direction: row;
   }
 }
 @media (max-width: 600px) {
-  header {
-    position: fixed;
-    top: 0;
-    z-index: 2;
-  }
   #header-container {
     flex-direction: column;
   }
@@ -472,20 +464,6 @@ header *, header *:visited, header *:active, header *:hover {
 }
 
 /* pages */
-@media (min-width: 600px) {
-  .page-contents {
-    padding: 30px;
-    margin: 0px 120px;
-    max-width: 1200px;
-  }
-}
-@media (max-width: 600px) {
-  .page-contents {
-    padding: 30px;
-    margin: 80px 120px 0px 120px;
-    max-width: 1200px;
-  }
-}
 .page {
   display: flex;
   flex-direction: column;
@@ -495,6 +473,9 @@ header *, header *:visited, header *:active, header *:hover {
   overflow-x: hidden;
 }
 .page-contents {
+  max-width: 1200px;
+  padding: 30px;
+  margin: 0px 120px;
   max-width: 1200px;
 }
 
@@ -622,6 +603,16 @@ header *, header *:visited, header *:active, header *:hover {
 }
 
 /* Shop */
+@media (max-width: 600px) {
+  #shop-contents {
+    margin-top: 80px;
+  }
+  #shop > header {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+}
 #products-container {
   display: flex;
   flex-direction: row;
