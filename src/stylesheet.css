@@ -67,11 +67,19 @@ header *, header *:visited, header *:active, header *:hover {
   width: 100%;
 }
 @media (min-width: 600px) {
+  header {
+    position: relative;
+  }
   #header-container {
     flex-direction: row;
   }
 }
 @media (max-width: 600px) {
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
   #header-container {
     flex-direction: column;
   }
@@ -321,7 +329,7 @@ header *, header *:visited, header *:active, header *:hover {
   height: 100vh;
   background-color: white;
   transition: all 0.33s ease-in-out;
-  z-index: 2;
+  z-index: 4;
 }
 #shopping-cart.visible {
   right: 0px;
@@ -452,7 +460,7 @@ header *, header *:visited, header *:active, header *:hover {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.75);
   transition: all .33s ease-in-out;
-  z-index: 1;
+  z-index: 3;
   cursor: pointer;
 }
 #cart-background.visible {
@@ -463,6 +471,20 @@ header *, header *:visited, header *:active, header *:hover {
 }
 
 /* pages */
+@media (min-width: 600px) {
+  .page-contents {
+    padding: 30px;
+    margin: 0px 120px;
+    max-width: 1200px;
+  }
+}
+@media (max-width: 600px) {
+  .page-contents {
+    padding: 30px;
+    margin: 80px 120px 0px 120px;
+    max-width: 1200px;
+  }
+}
 .page {
   display: flex;
   flex-direction: column;
@@ -472,8 +494,6 @@ header *, header *:visited, header *:active, header *:hover {
   overflow-x: hidden;
 }
 .page-contents {
-  padding: 30px;
-  margin: 0px 120px;
   max-width: 1200px;
 }
 
