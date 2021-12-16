@@ -48,7 +48,7 @@ const Header = (props) => {
     return (
         <header>
             <div id='header-container'>
-                <Link id='header-left' to='/\'>
+                <Link id='header-left' to='/'>
                     <h1 id='title'>StrengthStore</h1>
                     <img id='title-icon' src={StoreIcon}></img>
                 </Link>
