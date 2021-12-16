@@ -295,6 +295,7 @@ header *, header *:visited, header *:active, header *:hover {
   }
   #shopping-cart-container {
     margin: 60px 30px;
+    gap: 40px;
   }
   #shopping-cart-title {
     font-size: 36px;
@@ -309,6 +310,9 @@ header *, header *:visited, header *:active, header *:hover {
   }
   #shopping-cart-container {
     margin: 30px 15px;
+  }
+  #shopping-cart-container > * {
+    margin-bottom: 40px;
   }
   #shopping-cart-title {
     font-size: 30px;
@@ -336,7 +340,6 @@ header *, header *:visited, header *:active, header *:hover {
   width: auto;
   font-size: large;
   font-family: 'Poppins-Bold';
-  gap: 40px;
 }
 #shopping-cart-title {
   text-align: center;
@@ -605,7 +608,7 @@ header *, header *:visited, header *:active, header *:hover {
 /* Shop */
 @media (max-width: 600px) {
   #shop-contents {
-    margin-top: 80px;
+    margin-top: 100px;
   }
   #shop > header {
     position: fixed;
