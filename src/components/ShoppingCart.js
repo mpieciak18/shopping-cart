@@ -2,18 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const ShoppingCart = (props) => {
-    const { visibility, toggleVisibility, cart, updateCart } = props
-
-    const [total, setTotal] = useState(0)
-
-    // Update shopping cart total from cart subtotals
-    useEffect(() => {
-        let newTotal = 0
-        for (let i = 0; i < cart.length; i++) {
-            newTotal += cart[i].subtotal
-        }
-        setTotal(newTotal)
-    }, [cart])
+    const { visibility, toggleVisibility, cart, updateCart, total } = props
 
     const addItem = (event) => {
         const productId = event.target.parentElement.parentElement.parentElement.id

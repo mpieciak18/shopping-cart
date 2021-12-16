@@ -9,6 +9,7 @@ const Header = (props) => {
 
     const [visibility, setVisibility] = useState('hidden')
 
+    // Hide or display shopping cart
     const toggleVisibility = () => {
         const page = document.querySelector('body') 
 
@@ -20,6 +21,17 @@ const Header = (props) => {
             page.style.overflow = 'visible'
         }
     }
+
+    const [total, setTotal] = useState(0)
+
+    // Update shopping cart total from cart subtotals
+    useEffect(() => {
+        let newTotal = 0
+        for (let i = 0; i < cart.length; i++) {
+            newTotal += cart[i].subtotal
+        }
+        setTotal(newTotal)
+    }, [cart])
 
     return (
         <header>
@@ -37,7 +49,13 @@ const Header = (props) => {
                     </div>
                 </nav>
             </div>
-            <ShoppingCart visibility={visibility} toggleVisibility={toggleVisibility} cart={cart} updateCart={updateCart} />
+            <ShoppingCart
+                visibility={visibility}
+                toggleVisibility={toggleVisibility}
+                cart={cart}
+                updateCart={updateCart}
+                total={total}
+            />
         </header>
     )
 }
