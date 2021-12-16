@@ -141,8 +141,7 @@ const App = () => {
     }
 
     return (
-        // <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Routes>
                 <Route exact path='/' element={<Home cart={cart} updateCart={updateCart} />} />
                 <Route exact path='/home' element={<Home cart={cart} updateCart={updateCart} />} />
