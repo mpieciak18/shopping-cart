@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import StoreIcon from '../assets/images/store-icon.png'
 import CartIcon from '../assets/images/shopping-cart-icon.png'
 import ShoppingCart from "../components/ShoppingCart.js"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Header = (props) => {
     const { cart, updateCart } = props
@@ -23,14 +23,26 @@ const Header = (props) => {
     }
 
     const [total, setTotal] = useState(0)
+    const [quant, setQuant] = useState(0)
+    const [stickerVis, setStickerVis] = useState('hidden')
 
     // Update shopping cart total from cart subtotals
+    // and then update visibility of shopping cart sticker
     useEffect(() => {
         let newTotal = 0
+        let newQuant = 0
         for (let i = 0; i < cart.length; i++) {
             newTotal += cart[i].subtotal
+            newQuant += cart[i].quantity
         }
         setTotal(newTotal)
+        setQuant(newQuant)
+
+        if (newQuant > 0) {
+            setStickerVis('visible')
+        } else {
+            setStickerVis('hidden')
+        }
     }, [cart])
 
     return (
@@ -46,6 +58,7 @@ const Header = (props) => {
                     <Link to='/about'>About</Link>
                     <div id='header-cart-container' onClick={toggleVisibility}>
                         <img id='header-cart-icon' src={CartIcon}></img>
+                        <div id='header-cart-sticker' class={stickerVis}>{quant}</div>
                     </div>
                 </nav>
             </div>
