@@ -130,6 +130,7 @@ header *, header *:visited, header *:active, header *:hover {
   #header-cart-sticker {
     height: 20px;
     width: 20px;
+    font-size: medium;
   }
 }
 #header-left {
