@@ -1,5 +1,5 @@
 {
-  "name": "shopping-cart",
+  "name": "strength-store",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +12,7 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
-  "homepage": "http://mpieciak18.github.io/shopping-cart",
+  "homepage": "http://mpieciak18.github.io/strength-store",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
