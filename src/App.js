@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { HashRouter, Routes, Route } from "react-router-dom"
 import Home from './pages/Home.js'
 import Shop from './pages/Shop.js'
 import ComingSoon from './pages/ComingSoon.js'
@@ -141,14 +141,14 @@ const App = () => {
     }
 
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter>
             <Routes>
                 <Route exact path='/' element={<Home cart={cart} updateCart={updateCart} />} />
                 <Route exact path='/home' element={<Home cart={cart} updateCart={updateCart} />} />
                 <Route exact path='/shop' element={<Shop products={products} updateCart={updateCart} cart={cart} /> } />
                 <Route exact path='/about' element={<ComingSoon cart={cart} updateCart={updateCart} />} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
